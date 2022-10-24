@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="596.0" prefWidth="1114.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="26.0" layoutY="22.0" text="Restaurant Management System v1.0">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Label>
+      <TabPane layoutX="-992.0" layoutY="14.0" prefHeight="200.0" prefWidth="965.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="User Management" />
+          <Tab text="Customer Information" />
+            <Tab text="Food Menu">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <TabPane layoutX="26.0" layoutY="76.0" prefHeight="484.0" prefWidth="1054.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="User Management">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="458.0" prefWidth="1077.0">
+                     <children>
+                        <Label layoutX="20.0" layoutY="124.0" text="Username" />
+                        <TextField id="txtUsername" layoutX="20.0" layoutY="150.0" prefHeight="25.0" prefWidth="316.0" />
+                        <PasswordField id="txtPassword" layoutX="20.0" layoutY="241.0" prefHeight="25.0" prefWidth="316.0" />
+                        <Label layoutX="20.0" layoutY="214.0" text="Password" />
+                        <Button fx:id="btnDeleteUser" layoutX="249.0" layoutY="391.0" mnemonicParsing="false" onAction="#delete" prefHeight="25.0" prefWidth="89.0" text="Delete" />
+                        <Label layoutX="20.0" layoutY="302.0" text="Email Address" />
+                        <TextField id="txtEmailAddress" layoutX="20.0" layoutY="326.0" prefHeight="25.0" prefWidth="316.0" />
+                        <Button fx:id="btnAddUser" layoutX="21.0" layoutY="391.0" mnemonicParsing="false" onAction="#add" prefHeight="25.0" prefWidth="89.0" text="Add" />
+                        <Button fx:id="btnUpdateUser" layoutX="133.0" layoutY="391.0" mnemonicParsing="false" onAction="#update" prefHeight="25.0" prefWidth="89.0" text="Update" />
+                        <TableView id="tableUserManagement" fx:id="tableUsers" layoutX="392.0" layoutY="122.0" prefHeight="294.0" prefWidth="637.0">
+                           <columns>
+                              <TableColumn fx:id="columnID" prefWidth="41.0" text="ID" />
+                              <TableColumn fx:id="columnUsername" prefWidth="153.0" text="Username" />
+                              <TableColumn fx:id="columnPassword" prefWidth="156.0" text="Password" />
+                           </columns>
+                        </TableView>
+                        <Label layoutX="22.0" layoutY="22.0" text="User Management">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Customer Information">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="22.0" layoutY="22.0" text="Customer Information">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="22.0" layoutY="100.0" text="First Name" />
+                        <TextField id="txtFirstName" layoutX="22.0" layoutY="126.0" prefHeight="25.0" prefWidth="316.0" />
+                        <Label layoutX="22.0" layoutY="177.0" text="Last Name" />
+                        <TextField id="txtLastName" layoutX="22.0" layoutY="203.0" prefHeight="25.0" prefWidth="316.0" />
+                        <Label layoutX="22.0" layoutY="256.0" text="Phone Number" />
+                        <TextField id="txtPhoneNumber" layoutX="22.0" layoutY="282.0" prefHeight="25.0" prefWidth="316.0" />
+                        <Label layoutX="22.0" layoutY="334.0" text="Rewards Number:" />
+                        <Label layoutX="22.0" layoutY="370.0" text="Last Visit:" />
+                        <Label layoutX="603.0" layoutY="101.0" text="Email Address" />
+                        <TextField id="txtEmailAddress" layoutX="603.0" layoutY="127.0" prefHeight="25.0" prefWidth="316.0" />
+                        <CheckBox id="chkboxNewsletter" layoutX="605.0" layoutY="186.0" mnemonicParsing="false" text="Subscribed to e-newsletter?" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Order">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="22.0" layoutY="22.0" text="Order">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Button id="btnTable01" layoutX="20.0" layoutY="89.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="60.0" text="Table 1">
+                           <font>
+                              <Font size="10.0" />
+                           </font>
+                        </Button>
+                        <Button id="btnTable02" layoutX="100.0" layoutY="89.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="60.0" text="Table 2">
+                           <font>
+                              <Font size="10.0" />
+                           </font>
+                        </Button>
+                        <Button id="btnTable03" layoutX="180.0" layoutY="89.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="60.0" text="Table 3">
+                           <font>
+                              <Font size="10.0" />
+                           </font>
+                        </Button>
+                        <Button id="btnTable04" layoutX="260.0" layoutY="89.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="60.0" text="Table 4">
+                           <font>
+                              <Font size="10.0" />
+                           </font>
+                        </Button>
+                        <Button id="btnTable05" layoutX="20.0" layoutY="170.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="60.0" text="Table 5">
+                           <font>
+                              <Font size="10.0" />
+                           </font>
+                        </Button>
+                        <Button id="btnTable06" layoutX="100.0" layoutY="170.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="60.0" text="Table 6">
+                           <font>
+                              <Font size="10.0" />
+                           </font>
+                        </Button>
+                        <Button id="btnTable07" layoutX="180.0" layoutY="170.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="60.0" text="Table 7">
+                           <font>
+                              <Font size="10.0" />
+                           </font>
+                        </Button>
+                        <Button id="btnTable08" layoutX="260.0" layoutY="170.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="60.0" text="Table 8">
+                           <font>
+                              <Font size="10.0" />
+                           </font>
+                        </Button>
+                        <TableView id="tableOrder" fx:id="tableUsers1" layoutX="389.0" layoutY="83.0" prefHeight="223.0" prefWidth="637.0">
+                           <columns>
+                              <TableColumn fx:id="columnID1" prefWidth="34.0" text="ID" />
+                              <TableColumn id="orderTable" fx:id="columnUsername1" prefWidth="160.0" text="Item" />
+                              <TableColumn fx:id="columnPassword1" prefWidth="75.0" text="Price" />
+                              <TableColumn fx:id="columnPassword11" prefWidth="339.0" text="Special Request" />
+                           </columns>
+                        </TableView>
+                        <Button id="btnTable09" layoutX="20.0" layoutY="250.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="60.0" text="Table 9">
+                           <font>
+                              <Font size="10.0" />
+                           </font>
+                        </Button>
+                        <Button id="btnTable10" layoutX="100.0" layoutY="250.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="60.0" text="Table 10">
+                           <font>
+                              <Font size="10.0" />
+                           </font>
+                        </Button>
+                        <Button id="btnTable11" layoutX="180.0" layoutY="250.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="60.0" text="Table 11">
+                           <font>
+                              <Font size="10.0" />
+                           </font>
+                        </Button>
+                        <Button id="btnTable12" layoutX="260.0" layoutY="250.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="60.0" text="Table 12">
+                           <font>
+                              <Font size="10.0" />
+                           </font>
+                        </Button>
+                        <Button id="btnTable13" layoutX="20.0" layoutY="330.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="60.0" text="Table 13">
+                           <font>
+                              <Font size="10.0" />
+                           </font>
+                        </Button>
+                        <Button id="btnTable14" layoutX="100.0" layoutY="330.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="60.0" text="Table 14">
+                           <font>
+                              <Font size="10.0" />
+                           </font>
+                        </Button>
+                        <Button id="btnTable15" layoutX="180.0" layoutY="330.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="60.0" text="Table 15">
+                           <font>
+                              <Font size="10.0" />
+                           </font>
+                        </Button>
+                        <ChoiceBox layoutX="389.0" layoutY="360.0" prefHeight="25.0" prefWidth="229.0" />
+                        <Button layoutX="850.0" layoutY="318.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="176.0" text="Remove Item" />
+                        <Button layoutX="389.0" layoutY="401.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="230.0" text="Add Item" />
+                        <TextArea layoutX="633.0" layoutY="360.0" prefHeight="70.0" prefWidth="394.0" text="Special Requests" />
+                        <Label layoutX="390.0" layoutY="322.0" text="Total: " />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
